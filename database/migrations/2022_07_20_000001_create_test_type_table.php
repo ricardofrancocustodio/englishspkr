@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('question', function (Blueprint $table) {
-            $table->id('id_question');
-            $table->string('question_text');
-            $table->string('img_question');
-            $table->string('audio_question');
-            $table->string('id_time_question');
-            $table->string('id_practice_test');
-            $table->string('id_test_type');
+        Schema::create('test_type', function (Blueprint $table) {
+            $table->id('id_test_type');
+            $table->string('test_type');
             // $table->timestamp('email_verified_at')->nullable();
             // $table->string('password');
             // $table->rememberToken();
@@ -35,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question');
+        Schema::dropIfExists('test_type');
     }
 };
