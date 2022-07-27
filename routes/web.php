@@ -18,11 +18,16 @@ Route::get('/', function () {
 });
 
 Route::post('/store', 'TestController@store')->name('store');
-Route::get('/instructions', 'TestController@instructions')->name('instructions');
+//Route::get('/instructions', 'TestController@instructions')->name('instructions');
 
-Route::get('/chooseyourtest', function () {
-    return view('chooseyourtest');
-})->middleware(['auth'])->name('chooseyourtest');
+Route::get('/instruction', function () {
+    return view('instruction');
+})->middleware(['auth'])->name('instruction');
+
+Route::get('/practicetest', function () {
+    return view('practicetest');
+})->middleware(['auth'])->name('practicetest');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
